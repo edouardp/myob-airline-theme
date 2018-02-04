@@ -30,9 +30,9 @@ let g:airline#themes#myob#palette = {}
 " to the dictionary.  The array is in the format:
 " [ guifg, guibg, ctermfg, ctermbg, opts ]. See "help attr-list" for valid
 " values for the "opt" value.
-let s:N1   = [ '#00005f' , '#dfff00' , 17  , 190 ]
-let s:N2   = [ '#ffffff' , '#444444' , 255 , 238 ]
-let s:N3   = [ '#9cffd3' , '#202020' , 85  , 234 ]
+let s:N1   = [ '#c5cace' , '#b93499' , 17  , 190 ]
+let s:N2   = [ '#c5cace' , '#8241aa' , 255 , 238 ]
+let s:N3   = [ '#c5cace' , '#6100a5' , 85  , 234 ]
 let g:airline#themes#myob#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
 " Here we define overrides for when the buffer is modified.  This will be
@@ -43,9 +43,9 @@ let g:airline#themes#myob#palette.normal_modified = {
       \ }
 
 
-let s:I1 = [ '#00005f' , '#00dfff' , 17  , 45  ]
-let s:I2 = [ '#ffffff' , '#005fff' , 255 , 27  ]
-let s:I3 = [ '#ffffff' , '#000080' , 15  , 17  ]
+let s:I1   = [ '#c5cace' , '#b93499' , 17  , 190 ]
+let s:I2   = [ '#c5cace' , '#8241aa' , 255 , 238 ]
+let s:I3   = [ '#c5cace' , '#6100a5' , 85  , 234 ]
 let g:airline#themes#myob#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
 let g:airline#themes#myob#palette.insert_modified = {
       \ 'airline_c': [ '#ffffff' , '#5f005f' , 255     , 53      , ''     ] ,
@@ -60,18 +60,18 @@ let g:airline#themes#myob#palette.replace.airline_a = [ s:I2[0]   , '#af0000' , 
 let g:airline#themes#myob#palette.replace_modified = g:airline#themes#myob#palette.insert_modified
 
 
-let s:V1 = [ '#000000' , '#ffaf00' , 232 , 214 ]
-let s:V2 = [ '#000000' , '#ff5f00' , 232 , 202 ]
-let s:V3 = [ '#ffffff' , '#5f0000' , 15  , 52  ]
+let s:V1   = [ '#c5cace' , '#b93499' , 17  , 190 ]
+let s:V2   = [ '#c5cace' , '#8241aa' , 255 , 238 ]
+let s:V3   = [ '#c5cace' , '#6100a5' , 85  , 234 ]
 let g:airline#themes#myob#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
 let g:airline#themes#myob#palette.visual_modified = {
       \ 'airline_c': [ '#ffffff' , '#5f005f' , 255     , 53      , ''     ] ,
       \ }
 
 
-let s:IA1 = [ '#4e4e4e' , '#1c1c1c' , 239 , 234 , '' ]
-let s:IA2 = [ '#4e4e4e' , '#262626' , 239 , 235 , '' ]
-let s:IA3 = [ '#4e4e4e' , '#303030' , 239 , 236 , '' ]
+let s:IA1   = [ '#1b2830' , '#c5cace' , 17  , 190 ]
+let s:IA2   = [ '#1b2830' , '#acb4bc' , 255 , 238 ]
+let s:IA3   = [ '#1b2830' , '#c5cace' , 85  , 234 ]
 let g:airline#themes#myob#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
 let g:airline#themes#myob#palette.inactive_modified = {
       \ 'airline_c': [ '#875faf' , '' , 97 , '' , '' ] ,
@@ -85,8 +85,8 @@ let g:airline#themes#myob#palette.inactive_modified = {
 " this means is that regardless of which section the part is defined in, it
 " will be red instead of the section's foreground color. You can also have
 " multiple parts with accents within a section.
-let g:airline#themes#myob#palette.accents = {
-      \ 'red': [ '#ff0000' , '' , 160 , ''  ]
+let g:airline#themes#myob#palette.accents = { 
+      \ 'red': [ '#ce2554' , '' , 160 , ''  ]
       \ }
 
 
@@ -100,4 +100,26 @@ if get(g:, 'loaded_ctrlp', 0)
         \ [ '#ffffff' , '#875fd7' , 231 , 98  , ''     ],
         \ [ '#5f00af' , '#ffffff' , 55  , 231 , 'bold' ])
 endif
+
+
+" Warnings
+"let s:ER = airline#themes#get_highlight2(['ErrorMsg', 'bg'], ['ErrorMsg', 'fg'], 'bold')
+let g:airline#themes#myob#palette.normal.airline_warning = [ '#1b2830', '#ec0677', '', '' ]
+let g:airline#themes#myob#palette.normal_modified.airline_warning  = g:airline#themes#myob#palette.normal.airline_warning
+let g:airline#themes#myob#palette.insert.airline_warning           = g:airline#themes#myob#palette.normal.airline_warning
+let g:airline#themes#myob#palette.insert_modified.airline_warning  = g:airline#themes#myob#palette.normal.airline_warning
+let g:airline#themes#myob#palette.visual.airline_warning           = g:airline#themes#myob#palette.normal.airline_warning
+let g:airline#themes#myob#palette.visual_modified.airline_warning  = g:airline#themes#myob#palette.normal.airline_warning
+let g:airline#themes#myob#palette.replace.airline_warning          = g:airline#themes#myob#palette.normal.airline_warning
+let g:airline#themes#myob#palette.replace_modified.airline_warning = g:airline#themes#myob#palette.normal.airline_warning
+
+" Errors
+let g:airline#themes#myob#palette.normal.airline_error = [ 'b2830', '#ec0677', '', '' ]
+let g:airline#themes#myob#palette.normal_modified.airline_error    = g:airline#themes#myob#palette.normal.airline_error
+let g:airline#themes#myob#palette.insert.airline_error             = g:airline#themes#myob#palette.normal.airline_error
+let g:airline#themes#myob#palette.insert_modified.airline_error    = g:airline#themes#myob#palette.normal.airline_error
+let g:airline#themes#myob#palette.visual.airline_error             = g:airline#themes#myob#palette.normal.airline_error
+let g:airline#themes#myob#palette.visual_modified.airline_error    = g:airline#themes#myob#palette.normal.airline_error
+let g:airline#themes#myob#palette.replace.airline_error            = g:airline#themes#myob#palette.normal.airline_error
+let g:airline#themes#myob#palette.replace_modified.airline_error   = g:airline#themes#myob#palette.normal.airline_error
 
