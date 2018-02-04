@@ -114,7 +114,7 @@ let g:airline#themes#myob#palette.replace.airline_warning          = g:airline#t
 let g:airline#themes#myob#palette.replace_modified.airline_warning = g:airline#themes#myob#palette.normal.airline_warning
 
 " Errors
-let g:airline#themes#myob#palette.normal.airline_error = [ 'b2830', '#ec0677', '', '' ]
+let g:airline#themes#myob#palette.normal.airline_error = [ '#1b2830', '#e6c543', '', '' ]
 let g:airline#themes#myob#palette.normal_modified.airline_error    = g:airline#themes#myob#palette.normal.airline_error
 let g:airline#themes#myob#palette.insert.airline_error             = g:airline#themes#myob#palette.normal.airline_error
 let g:airline#themes#myob#palette.insert_modified.airline_error    = g:airline#themes#myob#palette.normal.airline_error
