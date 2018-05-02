@@ -43,6 +43,17 @@ let g:airline#themes#myob#palette.inactive_modified = {
       \ 'airline_c': [ '#875faf' , '' , 97 , '' , '' ] ,
       \ }
 
+
+" Terminal
+let s:TE = [ '#1C1C1C' , '#3A3A3A' , 254 , 237 , '' ]
+let g:airline#themes#myob#palette.normal.airline_term = [
+        \ s:TE[0], s:TE[1], s:TE[2], s:TE[3]
+        \ ]
+let g:airline#themes#myob#palette.insert.airline_term  = g:airline#themes#myob#palette.normal.airline_term
+let g:airline#themes#myob#palette.visual.airline_term  = g:airline#themes#myob#palette.normal.airline_term
+let g:airline#themes#myob#palette.replace.airline_term = g:airline#themes#myob#palette.normal.airline_term
+
+
 let g:airline#themes#myob#palette.accents = { 
       \ 'red': [ '#ce2554' , '' , 160 , ''  ]
       \ }
